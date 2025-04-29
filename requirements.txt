@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+httpx[socks]>=0.28.1 # 确保版本与 KS-Downloader 兼容或更高
+pydantic-settings
+aiosqlite>=0.21.0 # 如果 API 需要自己的数据库
