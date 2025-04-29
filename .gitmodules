@@ -1,0 +1,3 @@
+[submodule "submodules/ks_downloader"]
+	path = submodules/ks_downloader
+	url = https://github.com/vimson999/KS-Downloader-v1.git
