@@ -19,3 +19,10 @@ curl -X POST "http://127.0.0.1:9000/info" -H "Content-Type: application/json" -d
 curl -X POST "http://127.0.0.1:9000/info" -H "Content-Type: application/json" -d '{"url": "https://www.kuaishou.com/f/X34s4ikwqfv7vZN"}'
 
 
+git add .
+git commit -m "Initial commit: Setup Kuaishou API service structure with KS-Downloader submodule"
+git remote add origin https://github.com/vimson999/ks-api-v1.git   
+git remote add origin https://gitee.com/vim999/ks-api-v1.git
+git remote -v
+git push -u github master
+git push -u origin master
