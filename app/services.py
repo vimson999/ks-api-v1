@@ -176,7 +176,7 @@ class KuaishouService:
             if not extracted_info:
                  raise ValueError("从 HTML 中提取视频信息失败")
 
-            logger.warning(f"Service: 成功提取信息, 作品ID: {extracted_info.get('detailID')}")
+            logger.warning(f"Service: 成功提取信息, 作品ID: {extracted_info}")
             video_info_data = self._map_extracted_to_dict(extracted_info, url)
                         
             logger.warning(f"video_info_data data is : 成功提取信息, {video_info_data}")
@@ -289,6 +289,8 @@ class KuaishouService:
             image_urls = downloads
         elif photo_type == "视频" and downloads:
             video_url = downloads[0]
+        elif downloads:
+            video_url = downloads[0] 
         # --------------------
 
         # --- 解析计数字段 ---
