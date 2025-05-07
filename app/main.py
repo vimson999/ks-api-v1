@@ -183,6 +183,8 @@ async def get_kuaishou_info_only(
         metadata_dict = await service.get_video_metadata(request.url)
         # 使用 Pydantic 模型进行数据校验和格式化输出
         video_info_obj = TargetSchema(**metadata_dict)
+
+        logger.warning(f"TargetApiResponse data is : 成功提取信息, {video_info_obj}")
         return TargetApiResponse(data=video_info_obj)
     except HTTPException as e:
         # 如果 Service 层抛出了 HTTPException，直接重新抛出

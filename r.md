@@ -15,7 +15,6 @@ tree -L 10 -I 'venv|__pycache__|node_modules|.git|.idea|.vscode|static|dist|logs
 uvicorn app.main:app --reload --port 9000
 
 curl -X POST "http://127.0.0.1:9000/info" -H "Content-Type: application/json" -d '{"url": "https://www.kuaishou.com/f/X-MGnYq0BTJfH0y"}'
-
 curl -X POST "http://127.0.0.1:9000/info" -H "Content-Type: application/json" -d '{"url": "https://www.kuaishou.com/f/X34s4ikwqfv7vZN"}'
 
 
